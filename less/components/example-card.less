@@ -1,0 +1,106 @@
+.example-card {
+
+  margin-top: 5rem;
+  width: 40rem;
+  max-width: 100%;
+  .background-linear-gradient(@color-clam-shell, @color-light-brown);
+  border-radius: 20%;
+  position: relative;
+  .aesthetic-box-shadow(@color-wood-brown);
+
+  transform: rotateY(30deg) translateZ(-50px) scale(.9);
+
+  &-1 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: rotateY(30deg) translateZ(-50px) scale(.9);
+  }
+
+  &__image {
+    width: 40rem;
+    max-width: 100%;
+    height: 20rem;
+    background-size: cover;
+    .background-linear-gradient(@color-wood-brown, @color-dark-green, .5);
+    background-image+: url("../../images/thought-catalog-478469-unsplash.jpg");
+    z-index: 1;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    position: relative;
+    border-bottom: 2px solid black;
+    .aesthetic-box-shadow(@color-wood-brown);
+  }
+
+  &__rating {
+    position: absolute;
+    top: 80%;
+    left: 10%;
+    .icon-star {
+      color: @color-clam-shell;
+      font-size: 2rem;
+      letter-spacing: 10px;
+    }
+  }
+
+  &__fav-icon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: red;
+    .icon-heart {
+      font-size: 2rem;
+    }
+  }
+
+  &__share-icon {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: @color-clam-shell;
+    .icon-share{
+
+      font-size: 2rem;
+    }
+  }
+
+  &__download-icon {
+    position: absolute;
+    top: 80%;
+    right: 10%;
+    color: @color-clam-shell;
+    .icon-book {
+      font-size: 2rem;
+    }
+  }
+
+  &__book-title {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    font-family: 'Courgette', cursive;
+    margin-top: 2rem;
+  }
+
+  &_book-content {
+    display: flex;
+    max-width: 80%;
+    margin: 5rem auto;
+    font-size: 2rem;
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  &__comments-icon {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    .icon-comment{
+      color: @color-light-green;
+      font-size: 3rem;
+    }
+  }
+
+
+}

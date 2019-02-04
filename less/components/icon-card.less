@@ -1,0 +1,39 @@
+.icon-card {
+  border-radius: 10%;
+  padding-top: 6rem;
+  margin-top: 5rem;
+  .background-linear-gradient(#86e6c2, #a9851a);
+  width: 40rem;
+  max-width: 95%;
+  .aesthetic-box-shadow(@color-wood-brown);
+
+  h2 {
+    font-family: 'Courgette', cursive;
+    margin-top: 10rem;
+    text-align: center;
+    font-size: 3rem;
+  }
+  p{
+    margin: 4rem 5%;
+    font-size: 2rem;
+    max-width: 90%;
+  }
+
+  .icon-comment,
+  .icon-heart,
+  .icon-book,
+  .icon-share,
+  .icon-star{
+    display: flex;
+    justify-content: space-around;
+    font-size: 9rem;
+    &:before {
+
+      .background-linear-gradient(#795548, #d46c00);
+      .aesthetic-box-shadow(@color-wood-brown);
+      color: #f8cba1;
+      border-radius: 20%;
+      padding: 5rem;
+    }
+  }
+}

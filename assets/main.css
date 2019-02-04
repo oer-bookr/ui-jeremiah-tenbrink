@@ -133,16 +133,176 @@ table {
   border-spacing: 0;
 }
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.eot?d6v6dn');
+  src: url('fonts/icomoon.eot?d6v6dn#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?d6v6dn') format('truetype'), url('fonts/icomoon.woff?d6v6dn') format('woff'), url('fonts/icomoon.svg?d6v6dn#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-comment:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\e901";
+}
+.icon-book:before {
+  content: "\e902";
+}
+.icon-star:before {
+  content: "\e903";
+}
+.icon-share:before {
+  content: "\e904";
+}
 .example {
   background-image: linear-gradient(to bottom right, #ffffff, #88bbbb);
   min-height: 80vh;
   min-width: 100vw;
   margin-top: -15rem;
   -webkit-clip-path: circle(70.7% at 50% 50%);
-  clip-path: circle(200.7% at 50% calc(1.1*170vw));
+  clip-path: circle(200.7% at 50% calc(1.3*170vw));
 }
 .example__top {
-  margin-top: 20rem;
+  margin-top: 5rem;
+}
+.example__top h2 {
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  margin-bottom: 3rem;
+}
+.example__top p {
+  font-size: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+.example__middle {
+  margin-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+}
+.example__middle-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.example__middle-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.example__middle-center {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  perspective: 1000px;
+}
+.example-card {
+  margin-top: 5rem;
+  width: 40rem;
+  max-width: 100%;
+  background-image: linear-gradient(to bottom right, #ccbbaa, #aa8866);
+  border-radius: 20%;
+  position: relative;
+  box-shadow: 0 0 20px 2px rgba(34, 17, 0, 0.5);
+  transform: rotateY(30deg) translateZ(-50px) scale(0.9);
+}
+.example-card-1 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: rotateY(30deg) translateZ(-50px) scale(0.9);
+}
+.example-card__image {
+  width: 40rem;
+  max-width: 100%;
+  height: 20rem;
+  background-size: cover;
+  background-image: linear-gradient(to bottom right, rgba(34, 17, 0, 0.5), rgba(34, 68, 68, 0.5)), url("../../images/thought-catalog-478469-unsplash.jpg");
+  z-index: 1;
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  position: relative;
+  border-bottom: 2px solid black;
+  box-shadow: 0 0 20px 2px rgba(34, 17, 0, 0.5);
+}
+.example-card__rating {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+.example-card__rating .icon-star {
+  color: #ccbbaa;
+  font-size: 2rem;
+  letter-spacing: 10px;
+}
+.example-card__fav-icon {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: red;
+}
+.example-card__fav-icon .icon-heart {
+  font-size: 2rem;
+}
+.example-card__share-icon {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #ccbbaa;
+}
+.example-card__share-icon .icon-share {
+  font-size: 2rem;
+}
+.example-card__download-icon {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  color: #ccbbaa;
+}
+.example-card__download-icon .icon-book {
+  font-size: 2rem;
+}
+.example-card__book-title {
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  font-family: 'Courgette', cursive;
+  margin-top: 2rem;
+}
+.example-card_book-content {
+  display: flex;
+  max-width: 80%;
+  margin: 5rem auto;
+  font-size: 2rem;
+}
+.example-card_book-content p {
+  margin: 0 auto;
+}
+.example-card__comments-icon {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+}
+.example-card__comments-icon .icon-comment {
+  color: #557777;
+  font-size: 3rem;
 }
 .hero {
   display: flex;
@@ -166,6 +326,46 @@ table {
   font-size: 3rem;
   color: #221100;
   text-shadow: 0 2px 2px #ccbbaa;
+}
+.icon-card {
+  border-radius: 10%;
+  padding-top: 6rem;
+  margin-top: 5rem;
+  background-image: linear-gradient(to bottom right, #86e6c2, #a9851a);
+  width: 40rem;
+  max-width: 95%;
+  box-shadow: 0 0 20px 2px rgba(34, 17, 0, 0.5);
+}
+.icon-card h2 {
+  font-family: 'Courgette', cursive;
+  margin-top: 10rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.icon-card p {
+  margin: 4rem 5%;
+  font-size: 2rem;
+  max-width: 90%;
+}
+.icon-card .icon-comment,
+.icon-card .icon-heart,
+.icon-card .icon-book,
+.icon-card .icon-share,
+.icon-card .icon-star {
+  display: flex;
+  justify-content: space-around;
+  font-size: 9rem;
+}
+.icon-card .icon-comment:before,
+.icon-card .icon-heart:before,
+.icon-card .icon-book:before,
+.icon-card .icon-share:before,
+.icon-card .icon-star:before {
+  background-image: linear-gradient(to bottom right, #795548, #d46c00);
+  box-shadow: 0 0 20px 2px rgba(34, 17, 0, 0.5);
+  color: #f8cba1;
+  border-radius: 20%;
+  padding: 5rem;
 }
 .middle-section {
   background-image: linear-gradient(to bottom right, #ffffff, #ccbbaa);
