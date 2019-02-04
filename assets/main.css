@@ -1,0 +1,355 @@
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    animation: unset !important;
+    transition: none !important;
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 62.5%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+.example {
+  background-image: linear-gradient(to bottom right, #ffffff, #88bbbb);
+  min-height: 80vh;
+  min-width: 100vw;
+  margin-top: -15rem;
+  -webkit-clip-path: circle(70.7% at 50% 50%);
+  clip-path: circle(200.7% at 50% calc(1.1*170vw));
+}
+.example__top {
+  margin-top: 20rem;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  background-image: linear-gradient(to bottom right, rgba(170, 102, 34, 0.7), rgba(153, 170, 187, 0.7)), url("../../images/hieu-vu-minh-91995-unsplash.jpg");
+  -webkit-clip-path: circle(200% at 50% calc(-1.15*100vw));
+  clip-path: circle(200.7% at 50% calc(-1.15*100vw));
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+.hero__info {
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #221100;
+  text-shadow: 0 2px 2px #ccbbaa;
+}
+.middle-section {
+  background-image: linear-gradient(to bottom right, #ffffff, #ccbbaa);
+  min-height: 70vh;
+  margin-top: -15rem;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.middle-section__title {
+  margin-top: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #221100;
+}
+.middle-section__title h2 {
+  font-family: 'Courgette', cursive;
+  font-weight: bold;
+  font-size: 5rem;
+  text-align: center;
+  margin: 1rem 2rem;
+  text-shadow: 0 2px 2px #99aabb;
+}
+.middle-section__title h2:after {
+  content: "";
+  display: block;
+  margin-top: 2rem;
+  border-radius: 25%;
+  height: 3px;
+  background-image: linear-gradient(to bottom right, #99aabb, #52eae9, #557777);
+  background-size: auto auto;
+  background-repeat: repeat, no-repeat;
+}
+.middle-section__p {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+.middle-section__p p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  max-width: 80%;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #221100;
+  background-image: linear-gradient(to bottom right, #557777, #99aabb, #776644);
+}
+.header__nav {
+  width: 100%;
+}
+.header__nav-ul {
+  display: flex;
+  margin: 1rem 1rem;
+  justify-content: center;
+}
+.header__nav-ul li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.header__nav-ul li {
+  margin-top: 1rem;
+  display: none;
+}
+.header__nav-ul li a {
+  margin-top: 1rem;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: inherit;
+  text-shadow: 0 2px 2px #ccbbaa;
+}
+.header .navPanelToggle {
+  color: #221100;
+  display: block;
+  cursor: pointer;
+  font-size: 3rem;
+  text-align: right;
+  margin-right: 2rem;
+  text-shadow: 0 2px 2px #ccbbaa;
+}
+.header a {
+  margin-top: 1rem;
+  height: 4rem;
+  width: 60%;
+}
+.header a .header__logo {
+  margin-left: 1rem;
+  display: block;
+  height: 45px;
+  width: 120px;
+  background-size: auto auto;
+  text-shadow: 0 2px 2px #ccbbaa;
+  background-image: url("../../images/oerBookrLogo3WoodBrown.png");
+  background-size: cover;
+}
+.header.minimize {
+  width: 100%;
+  height: 0.3rem;
+  margin-bottom: 0;
+  color: #221100;
+  font-weight: bold;
+}
+.middle-section__reviews {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rem;
+}
+.middle-section__reviews .review {
+  display: flex;
+  max-width: 100%;
+}
+.middle-section__reviews .review:not(:first-child) {
+  margin-top: 8rem;
+}
+.middle-section__reviews .review:nth-child(2) .review__image {
+  order: 2;
+  margin-right: 0;
+  margin-left: 2rem;
+}
+.middle-section__reviews .review:nth-child(2) .review__content {
+  align-items: flex-end;
+}
+.middle-section__reviews .review:nth-child(2) .review__content h2:after {
+  width: 100%;
+}
+.middle-section__reviews .review__image {
+  display: none;
+  width: 10%;
+  margin-right: 3rem;
+}
+.middle-section__reviews .review__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.middle-section__reviews .review__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.middle-section__reviews .review__content h2:after {
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  border-radius: 40%;
+  content: "";
+  height: 5px;
+  display: block;
+  background-image: linear-gradient(to bottom right, #99aabb, #52eae9, #557777);
+  background-size: auto auto;
+}
+.middle-section__reviews .review__content-name {
+  text-align: center;
+  font-family: 'Courgette', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.middle-section__reviews .review__content-p {
+  font-size: 2rem;
+}
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.body-container {
+  display: flex;
+  flex-direction: column;
+}
+html {
+  font-size: 50%;
+}
+a {
+  color: #99aabb;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

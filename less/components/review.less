@@ -1,0 +1,80 @@
+.middle-section__reviews {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20rem;
+
+
+  .review {
+    &:not(:first-child){
+      margin-top: 8rem;
+    }
+
+    &:nth-child(2){
+      .review__image {
+        order: 2;
+        margin-right: 0;
+        margin-left: 2rem;
+      }
+
+      .review__content {
+        align-items: flex-end;
+
+        h2:after {
+          width: 100%;
+        }
+      }
+    }
+
+    display: flex;
+    max-width: 100%;
+
+    &__image {
+      display: none;
+      width: 10%;
+      margin-right: 3rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+
+
+      h2:after {
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 35%;
+        border-radius: 40%;
+        content: "";
+        height: 5px;
+        display: block;
+        .background-linear-gradient-3(@color-light-blue, #52eae9, @color-light-green );
+
+        background-size: auto auto;
+      }
+
+      &-name {
+        text-align: center;
+        font-family: 'Courgette', cursive;
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+      }
+
+      &-p{
+        font-size: 2rem;
+      }
+    }
+  }
+}
