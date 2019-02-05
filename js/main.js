@@ -93,6 +93,35 @@ class Review {
     }
 }
 
+class Scroll {
+    constructor (document) {
+        this.navBar = document.getElementById("nav");
+        window.addEventListener("scroll", () => {
+            this.scroll();
+        });
+        this.document = document;
+        this.navBarSet = false;
+    }
+    
+    scroll () {
+        this.scrollHeight = this.document.scrollingElement.scrollTop;
+        this.setNavBar();
+    }
+    
+    setNavBar() {
+        if (this.scrollHeight > 300) {
+            if (!this.navBarSet){
+                this.navBarSet = true;
+                this.navBar.classList.add("expand");
+            }
+        }else {
+            if (this.navBarSet){
+                this.navBar.classList.remove("expand");
+            }
+        }
+    }
+}
+
 const nav = new Nav();
 const reviews = new Reviews();
 
@@ -106,3 +135,7 @@ const person3 = new Review("Person4 Name", content, "../../images/pic01.jpg");
 Reviews.addReview(person1);
 Reviews.addReview(person2);
 Reviews.addReview(person3);
+
+
+
+const scroll = new Scroll(document);
