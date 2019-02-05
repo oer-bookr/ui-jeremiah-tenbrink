@@ -410,8 +410,8 @@ table {
   line-height: 1.5;
   letter-spacing: 3px;
   background-image: linear-gradient(to bottom right, rgba(170, 102, 34, 0.7), rgba(153, 170, 187, 0.7)), url("../../images/hieu-vu-minh-91995-unsplash.jpg");
-  -webkit-clip-path: circle(200% at 50% calc(-1.15*100vw));
-  clip-path: circle(200.7% at 50% calc(-1.15*100vw));
+  -webkit-clip-path: circle(200% at 50% calc(-1.15 * 100vw));
+  clip-path: circle(200.7% at 50% calc(-1.15 * 100vw));
   background-size: cover;
   width: 100%;
   height: 100vh;
@@ -428,16 +428,19 @@ table {
   border-radius: 10%;
   padding-top: 6rem;
   margin-top: 5rem;
-  background-image: linear-gradient(to bottom right, #86e6c2, #a9851a);
   width: 40rem;
   max-width: 95%;
-  box-shadow: 0 0 20px 2px rgba(34, 17, 0, 0.5);
+}
+@media only screen and (min-width: 400px) {
+  .icon-card {
+    max-width: 40%;
+    box-shadow: none;
+    border: none;
+  }
 }
 @media only screen and (min-width: 800px) {
   .icon-card {
     max-width: 40%;
-    box-shadow: none;
-    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     border: none;
   }
 }

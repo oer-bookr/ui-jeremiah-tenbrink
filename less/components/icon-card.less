@@ -2,15 +2,17 @@
   border-radius: 10%;
   padding-top: 6rem;
   margin-top: 5rem;
-  .background-linear-gradient(#86e6c2, #a9851a);
   width: 40rem;
   max-width: 95%;
-  .aesthetic-box-shadow(@color-wood-brown);
+
+  @media @tablet {
+    max-width: 40%;
+    box-shadow: none;
+    border: none;
+  }
 
   @media @desktop {
     max-width: 40%;
-    box-shadow: none;
-    .background-linear-gradient(transparent, transparent, 0);
     border: none;
   }
 
@@ -26,7 +28,8 @@
     text-align: center;
     font-size: 3rem;
   }
-  p{
+
+  p {
     margin: 4rem 5%;
     font-size: 2rem;
     max-width: 90%;
@@ -36,7 +39,7 @@
   .icon-heart,
   .icon-book,
   .icon-share,
-  .icon-star{
+  .icon-star {
     display: flex;
     justify-content: space-around;
     font-size: 9rem;
