@@ -1,19 +1,27 @@
 .header{
   display: flex;
+  height: 5px;
   flex-direction: row;
   justify-content: space-around;
   color: @color-wood-brown;
   .background-linear-gradient-3(@color-light-green, @color-light-blue, @color-tan);
+  transition: all .4s ;
+
+  &.position-fixed {
+    position: fixed;
+  }
+
+  &.expand {
+    height: 60px;
+    position: fixed;
+    top: 0;
+    .aesthetic-box-shadow(black);
+    z-index: 10;
+    transition: height .4s, position .4s .4s;
+  }
 
   &__nav {
     width: 100%;
-
-    .expand {
-      height: 100px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
 
   }
 
@@ -29,6 +37,11 @@
     li {
       margin-top: 1rem;
       display: none;
+
+      @media @desktop {
+        display: block;
+      }
+
       a{
         margin-top: 1rem;
         text-transform: capitalize;
@@ -47,6 +60,10 @@
     text-align: right;
     margin-right: 2rem;
     .aesthetic-text-shadow(@color-clam-shell);
+
+    @media @desktop {
+      display: none;
+    }
   }
 
   a {
@@ -69,9 +86,53 @@
 
   &.minimize{
     width: 100%;
-    height: .3rem;
     margin-bottom: 0;
     color: @color-wood-brown;
     font-weight: bold;
+
+  }
+}
+
+.full-page-nav {
+  .background-linear-gradient-3(@color-light-green, @color-light-blue, @color-tan);
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 20;
+
+  &__close {
+    position: absolute;
+    top: 5%;
+    left: 90%;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .full-page-nav__ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & li {
+      font-size: 4rem;
+      margin-top: 6rem;
+      a {
+        color: @color-wood-brown;
+        font-family: 'Courgette', cursive;
+        .aesthetic-text-shadow(@color-clam-shell);
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.closed {
+    transform-origin: top;
+    transform: rotateZ(-180deg);
+    transition: all .4s;
+  }
+  &.open {
+    transform: rotateZ(0);
+    transform-origin: top;
+    transition: all .4s;
   }
 }

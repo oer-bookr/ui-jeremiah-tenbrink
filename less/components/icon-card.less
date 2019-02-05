@@ -7,6 +7,19 @@
   max-width: 95%;
   .aesthetic-box-shadow(@color-wood-brown);
 
+  @media @desktop {
+    max-width: 40%;
+    box-shadow: none;
+    .background-linear-gradient(transparent, transparent, 0);
+    border: none;
+  }
+
+  @media @desktopLarge {
+    max-width: 90%;
+    width: 60rem;
+
+  }
+
   h2 {
     font-family: 'Courgette', cursive;
     margin-top: 10rem;
@@ -27,6 +40,15 @@
     display: flex;
     justify-content: space-around;
     font-size: 9rem;
+
+    @media @desktop {
+      font-size: 4rem;
+    }
+
+    @media @desktopLarge {
+      font-size: 3rem;
+    }
+
     &:before {
 
       .background-linear-gradient(#795548, #d46c00);
@@ -34,6 +56,13 @@
       color: #f8cba1;
       border-radius: 20%;
       padding: 5rem;
+
+      @media @desktop {
+        padding: 3rem;
+      }
+      @media @desktopLarge {
+        padding: 2rem;
+      }
     }
   }
 }

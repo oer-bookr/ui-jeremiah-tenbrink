@@ -1,15 +1,34 @@
 class Nav {
     constructor(){
         this.element = document.getElementById("nav");
+        this.fullPageElement = document.getElementById("full-page-nav");
         const ul = document.createElement('ul');
+        const fullPageUl = document.createElement('ul');
         ul.classList.add('header__nav-ul');
+        fullPageUl.classList.add("full-page-nav__ul");
         this.element.appendChild(ul);
+        this.fullPageElement.appendChild(fullPageUl);
         this.ul = ul;
+        this.fullpageUl = fullPageUl;
         this.li = [];
-        const liList = ['home', 'about', 'login', 'sign up'];
+        const liList = [
+            {
+                name: 'home',
+                link: "#",
+            }, {
+                name: 'about',
+                link: "#about"
+            },{
+                name: 'login',
+                link: "https://determined-lamarr-e4cba2.netlify.com/login"
+            },{
+                name: 'sign up',
+                link: 'https://determined-lamarr-e4cba2.netlify.com'
+            }];
         
         liList.forEach((li) => {
-            this.li.push(new NavItem(`#${li}`, li));
+            this.li.push(new NavItem(`${li.link}`, li.name));
+            this.fullpageUl.appendChild(new NavItem(`${li.link}`, li.name).element);
         });
         
         this.li.forEach((li) => {
@@ -95,7 +114,7 @@ class Review {
 
 class Scroll {
     constructor (document) {
-        this.navBar = document.getElementById("nav");
+        this.navBar = document.getElementById("header");
         window.addEventListener("scroll", () => {
             this.scroll();
         });
@@ -113,10 +132,15 @@ class Scroll {
             if (!this.navBarSet){
                 this.navBarSet = true;
                 this.navBar.classList.add("expand");
+                this.navBar.classList.add("position-fixed")
             }
         }else {
             if (this.navBarSet){
                 this.navBar.classList.remove("expand");
+                this.navBarSet = false;
+                window.setTimeout(() => {
+                    this.navBar.classList.remove("position-fixed");
+                }, 400);
             }
         }
     }
@@ -136,6 +160,12 @@ Reviews.addReview(person1);
 Reviews.addReview(person2);
 Reviews.addReview(person3);
 
+document.getElementById("nav-button").addEventListener( "click", () => {
+   document.getElementById("full-page-nav").classList.toggle("open");
+});
 
+document.getElementById("nav-close-button").addEventListener('click', () => {
+   document.getElementById("full-page-nav").classList.remove("open");
+});
 
 const scroll = new Scroll(document);
