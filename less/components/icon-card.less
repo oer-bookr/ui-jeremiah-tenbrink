@@ -4,6 +4,9 @@
   margin-top: 5rem;
   width: 40rem;
   max-width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media @tablet {
     max-width: 40%;
@@ -27,6 +30,19 @@
     margin-top: 10rem;
     text-align: center;
     font-size: 3rem;
+
+    &:after {
+      margin-top: 4rem;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      border-radius: 40%;
+      content: "";
+      height: 5px;
+      display: block;
+      background-image: linear-gradient(to bottom right, #99aabb, #52eae9, #557777);
+      background-size: auto auto;
+    }
   }
 
   p {

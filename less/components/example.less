@@ -24,12 +24,28 @@
 
   &__top {
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     h2 {
       font-size: 3rem;
       text-align: center;
       font-family: 'Courgette', cursive;
       margin-bottom: 3rem;
+
+      &:after {
+        margin-top: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        border-radius: 40%;
+        content: "";
+        height: 5px;
+        display: block;
+        background-image: linear-gradient(to bottom right, #99aabb, #52eae9, #557777);
+        background-size: auto auto;
+      }
     }
 
     p {
@@ -53,6 +69,13 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media @tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
       @media @desktop {
         order: 0;
         flex-direction: row;
@@ -72,6 +95,12 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @media @tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
 
       @media @desktop {
         order: 3;
@@ -95,12 +124,16 @@
       perspective: 1000px;
 
       @media @desktop {
+        max-width: 100%;
         order: 1;
+        flex-direction: row;
+        justify-content: space-around;
       }
 
       @media @desktopLarge {
         max-width: 30%;
         justify-content: center;
+        flex-direction: column;
       }
     }
 

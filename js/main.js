@@ -14,10 +14,13 @@ class Nav {
         const liList = [
             {
                 name: 'home',
-                link: "#",
+                link: "#"
             }, {
-                name: 'about',
+                name: 'reviews',
                 link: "#about"
+            },{
+                name: 'examples',
+                link: "#example"
             },{
                 name: 'login',
                 link: "https://determined-lamarr-e4cba2.netlify.com/login"
@@ -153,9 +156,9 @@ const content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab au
 " expedita explicabo fugit ipsa itaque, iure magnam maiores nesciunt obcaecati omnis" +
 " optio placeat quaerat reprehenderit";
 
-const person1 = new Review("Person1 Name", content, "../../images/pic01.jpg");
-const person2 = new Review("Person2 Name", content, "../../images/pic01.jpg");
-const person3 = new Review("Person4 Name", content, "../../images/pic01.jpg");
+const person1 = new Review("Andrew", content, "../../images/ihor-saveliev-507311-unsplash.jpg");
+const person2 = new Review("Chris", content, "../../images/marius-ciocirlan-398931-unsplash.jpg");
+const person3 = new Review("Emily", content, "../../images/rawpixel-256641-unsplash.jpg");
 Reviews.addReview(person1);
 Reviews.addReview(person2);
 Reviews.addReview(person3);

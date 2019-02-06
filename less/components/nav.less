@@ -2,10 +2,19 @@
   display: flex;
   height: 5px;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   color: @color-wood-brown;
   .background-linear-gradient-3(@color-light-green, @color-light-blue, @color-tan);
   transition: all .4s;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+  }
 
   &.position-fixed {
     position: fixed;
@@ -45,7 +54,7 @@
       a {
         margin-top: 1rem;
         text-transform: capitalize;
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: inherit;
         .aesthetic-text-shadow(@color-clam-shell);
       }
@@ -76,13 +85,11 @@
       display: block;
       height: 45px;
       width: 120px;
-      background-size: auto auto;
       .aesthetic-text-shadow(@color-clam-shell);
       background-image+: url("../../images/oerBookrLogo3WoodBrown.png");
       background-size: cover;
     }
   }
-
 
   &.minimize {
     width: 100%;

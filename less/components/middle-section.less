@@ -9,7 +9,6 @@
   justify-content: center;
   justify-items: center;
 
-
   &__title {
     margin-top: 20rem;
     display: flex;
@@ -25,19 +24,18 @@
       text-align: center;
       margin: 1rem 2rem;
       .aesthetic-text-shadow(@color-light-blue);
-    }
-  }
 
-  &__title {
-    h2:after {
-      content: "";
-      display: block;
-      margin-top: 2rem;
-      border-radius: 25%;
-      height: 3px;
-      .background-linear-gradient-3(@color-light-blue, #52eae9, @color-light-green);
-      background-size: auto auto;
-      background-repeat: repeat, no-repeat;
+      &:after {
+        content: "";
+        display: block;
+        margin-top: 5rem;
+        border-radius: 25%;
+        height: 3px;
+        .background-linear-gradient-3(@color-light-blue, #52eae9, @color-light-green);
+        background-size: auto auto;
+        background-repeat: repeat, no-repeat;
+
+      }
     }
   }
 
