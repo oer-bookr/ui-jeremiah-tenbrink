@@ -152,13 +152,24 @@ class Scroll {
 const nav = new Nav();
 const reviews = new Reviews();
 
-const content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aut consectetur eum" +
-" expedita explicabo fugit ipsa itaque, iure magnam maiores nesciunt obcaecati omnis" +
-" optio placeat quaerat reprehenderit";
+const content = "I'm so glad I found a site that allows me to search for new material based on" +
+    " star ratings. This site is only going to get better with time and more teachers making" +
+    " recommendations. Share this with your co workers please. The more of us that contribute" +
+    " the better this will all be. ";
+
+const content1 = "I was lost trying to teach certain concepts to my students. With the resources" +
+    " available on this site I've been able to see what other educators are doing and how they" +
+    " are structuring their classroom activates. Thanks to Bookr not only are my students" +
+    " learning more efficiently but at a cheaper cost. ";
+
+const content2 = "This is amazing. I no longer have to store hundreds of books or purchase new" +
+    " ones. I am able to download the ones I need and share them with my class at no expense to" +
+    " them. The ability to recommend or share different materials with teachers all over the world " +
+    "at the press of a button is also supper beneficial. ";
 
 const person1 = new Review("Andrew", content, "../../images/ihor-saveliev-507311-unsplash.jpg");
-const person2 = new Review("Chris", content, "../../images/marius-ciocirlan-398931-unsplash.jpg");
-const person3 = new Review("Emily", content, "../../images/rawpixel-256641-unsplash.jpg");
+const person2 = new Review("Chris", content1, "../../images/marius-ciocirlan-398931-unsplash.jpg");
+const person3 = new Review("Emily", content2, "../../images/rawpixel-256641-unsplash.jpg");
 Reviews.addReview(person1);
 Reviews.addReview(person2);
 Reviews.addReview(person3);
