@@ -349,7 +349,7 @@ table {
   }
 }
 .example-card__container {
-  max-width: 100%;
+  max-width: 90%;
   order: 2;
   position: relative;
 }
@@ -383,7 +383,7 @@ table {
 .example-card__container .example-card-1 {
   position: absolute;
   top: 10%;
-  left: 30%;
+  left: 25%;
   transform: rotateY(20deg) translateZ(-70px) scale(0.8) translateY(-30px);
 }
 @media only screen and (min-width: 800px) {
