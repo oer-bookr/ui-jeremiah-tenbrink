@@ -211,7 +211,6 @@ table {
 .example {
   background-image: linear-gradient(to bottom right, #ffffff, #88bbbb);
   min-height: 80vh;
-  min-width: 100vw;
   margin-top: -15rem;
   -webkit-clip-path: circle(99.7% at 50% 2323px);
   clip-path: circle(99.7% at 50% 2323px);
@@ -394,7 +393,7 @@ table {
 }
 @media only screen and (min-width: 1000px) {
   .example-card__container .example-card-1 {
-    transform: rotateY(13deg) translateZ(-70px) scale(0.9) translateY(24px) translateX(60px);
+    transform: rotateY(13deg) translateZ(-70px) scale(0.9) translateY(24px) translateX(40px);
   }
 }
 .example-card__container .example-card__image {
@@ -663,7 +662,7 @@ table {
 .middle-section {
   background-image: linear-gradient(to bottom right, #ffffff, #ccbbaa);
   min-height: 70vh;
-  margin-top: -20rem;
+  margin-top: -21rem;
   z-index: -2;
   display: flex;
   flex-direction: column;
