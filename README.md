@@ -38,7 +38,7 @@ The nav bar slides down once you have scrolled down the page enough to no longer
 
 ---
 The site is fully responsive and the links in the nav bar take the user to different points on the page. The signup and login links in the nav
-bar are linked to a demo of the actuall project. Not the landing page. 
+bar are linked to a demo of the actual project. Not the landing page. 
 
 At smaller screen sizes the nav bar will turn into a full page nav bar once the menu button is clicked. Click the x to close the 
 full page nav bar. 
