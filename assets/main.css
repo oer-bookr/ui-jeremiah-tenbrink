@@ -495,8 +495,13 @@ table {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right, rgba(34, 17, 0, 0.8), rgba(119, 102, 68, 0.8)), url("/images/clarisse-meyer-162874-unsplash.jpg");
+  background-image: linear-gradient(to bottom right, rgba(34, 17, 0, 0.8), rgba(119, 102, 68, 0.8)), url("/images/clarisse-meyer-162874-small.jpg");
   background-size: cover;
+}
+@media only screen and (min-width: 400px) {
+  .footer {
+    background-image: linear-gradient(to bottom right, rgba(34, 17, 0, 0.8), rgba(119, 102, 68, 0.8)), url("/images/clarisse-meyer-162874-unsplash.jpg");
+  }
 }
 .footer__copyright {
   color: #ccbbaa;
@@ -539,7 +544,7 @@ table {
   text-align: center;
   line-height: 1.5;
   letter-spacing: 3px;
-  background-image: linear-gradient(to bottom right, rgba(170, 102, 34, 0.7), rgba(153, 170, 187, 0.7)), url("../../images/hieu-vu-minh-91995-unsplash.jpg");
+  background-image: linear-gradient(to bottom right, rgba(170, 102, 34, 0.7), rgba(153, 170, 187, 0.7)), url("../../images/hieu-vu-minh-91995-small.jpg");
   -webkit-clip-path: ellipse(200% 100% at 50% 0);
   clip-path: ellipse(200% 100% at 50% 0);
   background-size: cover;
@@ -550,6 +555,7 @@ table {
 @media only screen and (min-width: 400px) {
   .hero {
     -webkit-clip-path: ellipse(200% 100% at 50% 0);
+    background-image: url("../../images/hieu-vu-minh-91995-unsplash.jpg");
     clip-path: ellipse(200% 100% at 50% 0);
   }
 }

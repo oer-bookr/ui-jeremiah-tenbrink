@@ -5,8 +5,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: linear-gradient(to bottom right, rgba(@color-wood-brown, .8), rgba(@color-tan, .8)), url("/images/clarisse-meyer-162874-unsplash.jpg");
+  background-image: linear-gradient(to bottom right, rgba(@color-wood-brown, .8), rgba(@color-tan, .8)), url("/images/clarisse-meyer-162874-small.jpg");
   background-size: cover;
+
+  @media @tablet {
+    background-image: linear-gradient(to bottom right, rgba(@color-wood-brown, .8), rgba(@color-tan, .8)), url("/images/clarisse-meyer-162874-unsplash.jpg");
+  }
 
   &__copyright {
     color: @color-clam-shell;
