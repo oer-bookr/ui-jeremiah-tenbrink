@@ -177,11 +177,11 @@ const content2 = "This is amazing. I no longer have to store hundreds of books o
     " them. The ability to recommend or share different materials with teachers all over the world " +
     "at the press of a button is also supper beneficial. ";
 
-const pic = new Img("(min-width: 800px) 50%", "../../images/ihor-saveliev-507311-unsplash.jpg" +
-    " 1200w, ../../images/ihor-saveliev-507311-small.jpg 800w", "person 1");
-const pic1 = new Img("(min-width: 800px) 50%", "../../images/marius-ciocirlan-398931-unsplash.jpg" +
+const pic = new Img("(min-width: 800px) 450px", "../../images/marius-ciocirlan-398931-small.jpg " +
+    " 800w, ../../images/marius-ciocirlan-398931-unsplash.jpg 1200w", "person 2");
+const pic1 = new Img("(min-width: 800px) 450px", "../../images/marius-ciocirlan-398931-unsplash.jpg " +
     " 1200w, ../../images/marius-ciocirlan-398931-small.jpg 800w", "person 2");
-const pic2 = new Img("(min-width: 800px) 50%", "../../images/rawpixel-256641-unsplash.jpg" +
+const pic2 = new Img("(min-width: 800px) 450px", "../../images/rawpixel-256641-unsplash.jpg" +
     " 1200w, ../../images/rawpixel-256641-small.jpg 800w", "person 3");
 
 const person1 = new Review("Andrew", content, pic);
