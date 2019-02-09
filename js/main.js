@@ -71,7 +71,9 @@ class Reviews{
         
         //create picture element
         const picture = document.createElement("img");
-        picture.setAttribute("src", review.img);
+        picture.setAttribute("srcset", review.img.srcset);
+        picture.setAttribute("sizes", review.img.sizes);
+        picture.setAttribute('alt', review.img.alt);
         
         // create div for picture element
         const pictureContainer = document.createElement("div");
@@ -112,6 +114,14 @@ class Review {
         this.name = name;
         this.content = content;
         this.img = img;
+    }
+}
+
+class Img {
+    constructor (sizes, srcset, alt){
+        this.sizes = sizes;
+        this.srcset = srcset;
+        this.alt = alt;
     }
 }
 
@@ -167,9 +177,16 @@ const content2 = "This is amazing. I no longer have to store hundreds of books o
     " them. The ability to recommend or share different materials with teachers all over the world " +
     "at the press of a button is also supper beneficial. ";
 
-const person1 = new Review("Andrew", content, "../../images/ihor-saveliev-507311-unsplash.jpg");
-const person2 = new Review("Chris", content1, "../../images/marius-ciocirlan-398931-unsplash.jpg");
-const person3 = new Review("Emily", content2, "../../images/rawpixel-256641-unsplash.jpg");
+const pic = new Img("(min-width: 800px) 50%", "../../images/ihor-saveliev-507311-unsplash.jpg" +
+    " 1200w, ../../images/ihor-saveliev-507311-small.jpg 800w", "person 1");
+const pic1 = new Img("(min-width: 800px) 50%", "../../images/marius-ciocirlan-398931-unsplash.jpg" +
+    " 1200w, ../../images/marius-ciocirlan-398931-small.jpg 800w", "person 2");
+const pic2 = new Img("(min-width: 800px) 50%", "../../images/rawpixel-256641-unsplash.jpg" +
+    " 1200w, ../../images/rawpixel-256641-small.jpg 800w", "person 3");
+
+const person1 = new Review("Andrew", content, pic);
+const person2 = new Review("Chris", content1, pic1);
+const person3 = new Review("Emily", content2, pic2);
 Reviews.addReview(person1);
 Reviews.addReview(person2);
 Reviews.addReview(person3);

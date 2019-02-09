@@ -554,8 +554,8 @@ table {
 }
 @media only screen and (min-width: 400px) {
   .hero {
+    background-image: linear-gradient(to bottom right, rgba(170, 102, 34, 0.7), rgba(153, 170, 187, 0.7)), url("../../images/hieu-vu-minh-91995-unsplash.jpg");
     -webkit-clip-path: ellipse(200% 100% at 50% 0);
-    background-image: url("../../images/hieu-vu-minh-91995-unsplash.jpg");
     clip-path: ellipse(200% 100% at 50% 0);
   }
 }
